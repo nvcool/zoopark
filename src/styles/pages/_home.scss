@@ -17,10 +17,6 @@
     text-align: center;
     margin-bottom: 8px;
     &-eco {
-      color: $orange;
-      font-family: "Shantell Sans";
-      font-size: 64px;
-      font-weight: 400;
       margin-bottom: 56px;
     }
   }
@@ -69,5 +65,25 @@
         width: 100%;
       }
     }
+  }
+  &__puma {
+    overflow: hidden;
+    height: 531px;
+    border-radius: 90px;
+    align-content: center;
+    display: grid;
+    margin-bottom: 100px;
+    img {
+      width: 1024px;
+    }
+  }
+  &__projects-title {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  &__projects-container {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

@@ -27,6 +27,39 @@ p {
   padding: 0;
 }
 
+.project {
+  background-color: #fff;
+  border-radius: 30px;
+  text-align: center;
+  color: $dark-green;
+  font-size: 18px;
+  line-height: 140%; /* 25.2px */
+  height: 382px;
+  padding: 16px 0 24px;
+  display: flex;
+  flex-direction: column;
+  strong {
+    font-weight: 600;
+    text-decoration-line: underline;
+    margin-bottom: 8px;
+    display: block;
+  }
+  &__image {
+    margin: 0 auto 16px;
+    width: 54px;
+    height: 54px;
+  }
+  p {
+    white-space: pre-line;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    gap: 16px;
+  }
+}
+
 .text {
   font-size: 18px;
   font-weight: 400;
@@ -35,6 +68,13 @@ p {
   strong {
     font-weight: 600;
   }
+}
+
+.title {
+  color: $orange;
+  font-family: "Shantell Sans";
+  font-size: 64px;
+  font-weight: 400;
 }
 
 .container {

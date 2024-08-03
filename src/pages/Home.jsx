@@ -2,6 +2,30 @@ import lyamur from "@assets/home/Lyamyr.png";
 import gusto from "@assets/home/pacha.png";
 import lebed from "@assets/home/lebed.png";
 import puma from "@assets/home/puma.png";
+import settings from "@assets/settings.svg";
+import vk from "@assets/vk.svg";
+import telegram from "@assets/telegram.svg";
+
+const projects = [
+  {
+    title: "Мы в ответе!",
+    description: `Социальный проект \n по защите природы`,
+    vk: "#",
+    telegram: "#",
+  },
+  {
+    title: "«Крышечки доброТЫ»",
+    description: `Рассказываем детям, как \n сохранить нашу планету чистой!`,
+    vk: "#",
+    telegram: "#",
+  },
+  {
+    title: "День экологических знаний",
+    description: "Проводится ежегодно 15 апреля",
+    vk: "#",
+    telegram: "#",
+  },
+];
 
 export const Home = () => {
   return (
@@ -20,7 +44,7 @@ export const Home = () => {
         <div className="home__lyamur">
           <img className="home__lyamur-image" src={lyamur} alt="lyamur" />
         </div>
-        <h2 className="home__title-eco">
+        <h2 className="home__title-eco title">
           Экологическая <br /> и социальная <br />
           ответственность
         </h2>
@@ -62,7 +86,29 @@ export const Home = () => {
           «Крышечки ДоброТЫ» наши волонтеры на регулярной основе организуют сбор
           перерабатываемых отходов.
         </p>
-        <img src={puma} alt="puma" />
+        <div className="home__puma">
+          <img src={puma} alt="puma" />
+        </div>
+        <h2 className="home__projects-title title">Проекты и события</h2>
+        <div className="home__projects-container">
+          {projects.map((project) => {
+            return (
+              <div key={project.title} className="project">
+                <img
+                  className="project__image"
+                  src={settings}
+                  alt="settings icon"
+                />
+                <strong>{project.title}</strong>
+                <p>{project.description}</p>
+                <div>
+                  <img src={vk} alt="" />
+                  <img src={telegram} alt="" />
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
