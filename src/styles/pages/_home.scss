@@ -1,0 +1,73 @@
+@use "../colors.scss" as *;
+
+.home {
+  background-image: url("src/assets/background/background_homeG.png");
+  padding-top: 228px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__description {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  &__title {
+    color: $orange;
+    font-family: "Shantell Sans";
+    font-size: 80px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 8px;
+    &-eco {
+      color: $orange;
+      font-family: "Shantell Sans";
+      font-size: 64px;
+      font-weight: 400;
+      margin-bottom: 56px;
+    }
+  }
+  &__lyamur {
+    height: 584px;
+    border-radius: 342px 342px 0px 0px;
+    overflow: hidden;
+    margin-bottom: 100px;
+    &-image {
+      width: 1024px;
+    }
+  }
+  &__direction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 24px;
+    &-description {
+      display: flex;
+      flex-direction: column;
+    }
+    &-image {
+      overflow: hidden;
+      border-radius: 90px;
+      img {
+        height: 788px;
+      }
+    }
+    &-title {
+      color: $yellow;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 140%; /* 44.8px */
+      margin-bottom: 40px;
+    }
+    &-text {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    &-lebed {
+      margin-top: auto;
+      img {
+        height: 268px;
+        border-radius: 160px 0px 0px 160px;
+        width: 100%;
+      }
+    }
+  }
+}
