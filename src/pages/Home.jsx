@@ -5,6 +5,12 @@ import puma from "@assets/home/puma.png";
 import settings from "@assets/settings.svg";
 import vk from "@assets/vk.svg";
 import telegram from "@assets/telegram.svg";
+import volonter1 from "@assets/home/volonter1.jpg";
+import volonter2 from "@assets/home/volonter2.jpg";
+import volonter3 from "@assets/home/volonter3.jpg";
+import { Button } from "../components/ui/Button";
+import volonter4 from "@assets/home/volonter4.jpg";
+import dushaMoloda from "@assets/home/dushaMoloda.jpg";
 
 const projects = [
   {
@@ -108,6 +114,64 @@ export const Home = () => {
               </div>
             );
           })}
+        </div>
+        <div className="home__button-projects">
+          <Button>Больше проектов</Button>
+        </div>
+        <div className="home__volonters">
+          <div className="home__volonters-image">
+            <h3 className="home__volonters-title title title--yellow">
+              Наши <br />
+              волонтеры
+              <br /> и участники
+            </h3>
+            <div>
+              <img src={volonter1} alt="volonter1" />
+            </div>
+            <div>
+              <img src={volonter2} alt="volonter2" />
+            </div>
+          </div>
+          <div className="home__volonters-image">
+            <div className="home__volonters-3">
+              <img src={volonter3} alt="volonter3" />
+            </div>
+            <div>
+              <img src={volonter4} alt="volonter4" />
+            </div>
+          </div>
+        </div>
+        <div className="home__volonters-description">
+          <p className="text text--lg">
+            Автономная некоммерческая организация поддержки семей, детей и
+            молодежи <strong>«Семейно-Молодежное Сообщество»</strong>{" "}
+            Ленинградская область.
+          </p>
+          <p className="text">
+            Объединяет семьи в дружные сообщества, чтобы учиться друг у друга
+            быть счастливыми в семье долгие годы.
+          </p>
+        </div>
+        <img className="home__dushamoloda" src={dushaMoloda} alt="" />
+        <div className="home__volonters-description">
+          <p className="text text--lg">
+            <strong>Отряд Серебряных волонтеров «Молоды душой»</strong>
+            от региональной общественной организации социального центра «Диалог
+            поколений».
+          </p>
+          <p className="text">
+            Миссия —{" "}
+            <strong>смягчение социальной напряженности в обществе</strong>,
+            создание условий для общения, самореализации и актуализации граждан
+            разных поколений.
+          </p>
+        </div>
+        <p className="home__text-center text text--lg">
+          Тоже хочешь стать волонтером?
+          <br /> Отправь анкету и <strong>стань частью нашей команды</strong>
+        </p>
+        <div className="home__button-projects">
+          <Button>Стать частью команды</Button>
         </div>
       </div>
     </div>
