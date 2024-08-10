@@ -1,5 +1,5 @@
 import React from "react";
 
-export const Button = ({ children }) => {
-  return <button className="button">{children}</button>;
+export const Button = ({ children, className }) => {
+  return <button className={`button ${className || ""}`}>{children}</button>;
 };

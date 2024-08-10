@@ -1,9 +1,9 @@
-@use "../colors.scss" as *;
+@use "../colors" as *;
 
 .home {
   background-image: url("src/assets/background/background_homeG.png");
   padding-top: 228px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   &__description {
     text-align: center;
@@ -16,6 +16,7 @@
     font-weight: 400;
     text-align: center;
     margin-bottom: 8px;
+    line-height: normal;
     &-eco {
       margin-bottom: 56px;
     }
@@ -66,15 +67,14 @@
       }
     }
   }
-  &__puma {
-    overflow: hidden;
+  &__image {
+    margin-bottom: 32px;
     height: 531px;
     border-radius: 90px;
-    align-content: center;
-    display: grid;
-    margin-bottom: 100px;
-    img {
-      width: 1024px;
+    &--puma {
+      margin-bottom: 100px;
+      width: 100%;
+      object-fit: cover;
     }
   }
   &__projects-title {
@@ -127,9 +127,16 @@
       margin-bottom: 56px;
     }
   }
-
-  &__text-center {
-    margin-bottom: 32px;
+  &__text-lampushka {
     text-align: center;
+    margin-bottom: 24px;
+    &-sm {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+  }
+  &__text-meeting {
+    text-align: center;
+    margin-bottom: 32px;
   }
 }

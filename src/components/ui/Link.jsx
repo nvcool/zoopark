@@ -1,6 +1,6 @@
-export const Link = ({ children, href }) => {
+export const Link = ({ children, href, className }) => {
   return (
-    <a className="link" href={href}>
+    <a className={`link ${className || ""}`} href={href}>
       {children}
     </a>
   );

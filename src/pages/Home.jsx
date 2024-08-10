@@ -11,6 +11,11 @@ import volonter3 from "@assets/home/volonter3.jpg";
 import { Button } from "../components/ui/Button";
 import volonter4 from "@assets/home/volonter4.jpg";
 import dushaMoloda from "@assets/home/dushaMoloda.jpg";
+import moris from "@assets/home/moris.jpg";
+import ryis from "@assets/home/ryis.jpg";
+import { SubscribeForm } from "../components/SubscribeForm";
+import { Support } from "../components/Support";
+import { Link } from "../components/ui/Link";
 
 const projects = [
   {
@@ -92,10 +97,8 @@ export const Home = () => {
           «Крышечки ДоброТЫ» наши волонтеры на регулярной основе организуют сбор
           перерабатываемых отходов.
         </p>
-        <div className="home__puma">
-          <img src={puma} alt="puma" />
-        </div>
-        <h2 className="home__projects-title title">Проекты и события</h2>
+        <img className="home__image home__image--puma " src={puma} alt="puma" />
+        <h2 className="title title--center">Проекты и события</h2>
         <div className="home__projects-container">
           {projects.map((project) => {
             return (
@@ -108,8 +111,12 @@ export const Home = () => {
                 <strong>{project.title}</strong>
                 <p>{project.description}</p>
                 <div>
-                  <img src={vk} alt="" />
-                  <img src={telegram} alt="" />
+                  <a href="#">
+                    <img src={vk} alt="" />
+                  </a>
+                  <a href="#">
+                    <img src={telegram} alt="" />
+                  </a>
                 </div>
               </div>
             );
@@ -166,13 +173,39 @@ export const Home = () => {
             разных поколений.
           </p>
         </div>
-        <p className="home__text-center text text--lg">
+        <p className="text text--lg text--center">
           Тоже хочешь стать волонтером?
           <br /> Отправь анкету и <strong>стань частью нашей команды</strong>
         </p>
         <div className="home__button-projects">
           <Button>Стать частью команды</Button>
         </div>
+        <h3 className="title title--center">Зоопарк на Лампушке</h3>
+        <img className="home__image" src={moris} alt="" />
+        <p className="home__text-lampushka text text--lg">
+          На территории Заповедного мира «Шишки на Лампушке» есть{" "}
+          <strong>уникальное место</strong>, где можно не только посмотреть на
+          животных, но и познакомиться со многими поближе: покормить, погладить,
+          вместе сфотографироваться или погулять.
+        </p>
+        <p className="home__text-lampushka-sm text">
+          Это <strong>«Зоопарк на Лампушке»</strong> - самый большой
+          лицензированный частный зоопарк Санкт-Петербурга и Ленинградской
+          области, в котором проживает более 400 животных.
+        </p>
+        <div className="home__button-projects">
+          <Button>Узнать больше</Button>
+        </div>
+        <h3 className="title title--center">Сафри</h3>
+        <img className="home__image" src={ryis} alt="" />
+        <p className="home__text-meeting text text--lg">
+          <strong>Экскурсия-знакомство</strong> с дикой природой.
+        </p>
+        <div className="home__button-projects">
+          <Button>Узнать больше</Button>
+        </div>
+        <SubscribeForm />
+        <Support />
       </div>
     </div>
   );
