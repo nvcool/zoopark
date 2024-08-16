@@ -2,11 +2,14 @@ import React from "react";
 import { Button } from "./ui/Button";
 import flowers from "@assets/home/flowers.png";
 import vk from "@assets/vk.svg";
+import flowersm from "@assets/home/flowersMobile.png";
 
 export const SubscribeForm = () => {
   return (
     <div className="subscribe">
-      <h3 className="title title--center">Подписаться на новости</h3>
+      <h3 className="subscribe__title title title--center">
+        Подписаться на новости
+      </h3>
       <div className="text text--center">
         Узнавайте о наших событиях <strong>первыми</strong>
       </div>
@@ -24,7 +27,8 @@ export const SubscribeForm = () => {
           required
         />
         <Button>Подписаться</Button>
-        <img src={flowers} alt="" />
+        <img className="subscribe__form-desktop" src={flowers} alt="" />
+        <img className="subscribe__form-mobile" src={flowersm} alt="" />
       </form>
       <div className="subscribe__paragraph">
         <p className="text">
