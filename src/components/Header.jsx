@@ -1,5 +1,6 @@
 import logo from "@assets/logo.svg";
 import { Link } from "./ui/Link";
+import menu from "@assets/menu.svg";
 
 const links = [
   { label: "О нас", href: "#" },
@@ -29,6 +30,9 @@ export function Header() {
             );
           })}
         </ul>
+        <div className="navigation__menu">
+          <img src={menu} alt="" />
+        </div>
       </nav>
     </header>
   );

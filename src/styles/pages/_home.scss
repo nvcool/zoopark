@@ -1,10 +1,12 @@
 @use "../colors" as *;
 
 .home {
-  background-image: url("src/assets/background/background_homeG.png");
-  padding-top: 228px;
+  background-image: url("src/assets/background/home-mobile.webp");
+  padding-top: 126px;
   background-size: contain;
   background-repeat: no-repeat;
+  display: grid;
+  gap: 56px;
   &__description {
     text-align: center;
     margin-bottom: 24px;
@@ -12,27 +14,30 @@
   &__title {
     color: $orange;
     font-family: "Shantell Sans";
-    font-size: 80px;
+    font-size: 36px;
     font-weight: 400;
     text-align: center;
     margin-bottom: 8px;
     line-height: normal;
     &-eco {
-      margin-bottom: 56px;
+      margin-bottom: 24px;
     }
   }
   &__lyamur {
-    height: 584px;
-    border-radius: 342px 342px 0px 0px;
+    height: 350px;
+    border-radius: 118px 118px 0px 0px;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
-    margin-bottom: 100px;
     &-image {
-      width: 1024px;
+      max-width: 1024px;
+      width: 100%;
+      object-fit: cover;
     }
   }
   &__direction {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 32px;
     margin-bottom: 24px;
     &-description {
@@ -42,16 +47,17 @@
     &-image {
       overflow: hidden;
       border-radius: 90px;
+      display: none;
       img {
         height: 788px;
       }
     }
     &-title {
       color: $yellow;
-      font-size: 32px;
       font-weight: 500;
-      line-height: 140%; /* 44.8px */
-      margin-bottom: 40px;
+      font-size: 20px;
+      line-height: 130.033%; /* 26.007px */
+      margin-bottom: 24px;
     }
     &-text {
       display: grid;
@@ -60,21 +66,33 @@
     }
     &-lebed {
       margin-top: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      overflow: hidden;
       img {
         height: 268px;
-        border-radius: 160px 0px 0px 160px;
         width: 100%;
+        object-fit: cover;
+        border-radius: 90px 0 0 90px;
+      }
+    }
+    &-pacha {
+      display: block;
+      img {
+        border-radius: 90px;
       }
     }
   }
   &__image {
-    margin-bottom: 32px;
-    height: 531px;
-    border-radius: 90px;
+    width: 100%;
+    margin-bottom: 24px;
+    height: 216px;
+    border-radius: 30px;
     &--puma {
-      margin-bottom: 100px;
       width: 100%;
       object-fit: cover;
+      height: 198px;
     }
   }
   &__projects-title {
@@ -83,39 +101,44 @@
   }
   &__projects-container {
     display: grid;
-    gap: 32px;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 32px;
+    gap: 16px;
+    margin-bottom: 16px;
   }
   &__button-projects {
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
   }
   &__dushamoloda {
+    height: 260px;
+    object-fit: cover;
+    width: 100%;
     border-radius: 60px;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
   &__volonters {
-    display: grid;
-    grid-template-columns: 407px 1fr;
+    margin-bottom: 24px;
     gap: 32px;
-    margin-bottom: 32px;
 
     &-title {
       color: $yellow;
+      text-align: center;
     }
     &-image {
       display: grid;
-      gap: 32px;
-      grid-template-rows: 258px 352px 352px;
+      grid-template-rows: none;
+      margin-bottom: 24px;
+
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         overflow: hidden;
         border-radius: 60px;
+        display: none;
       }
+    }
+    &-mobile img {
+      display: block;
     }
     &-3 {
       border-radius: 90px;
@@ -124,19 +147,133 @@
     &-description {
       display: grid;
       gap: 16px;
-      margin-bottom: 56px;
+      margin-bottom: 32px;
+      &--margin {
+        margin-bottom: 40px;
+      }
     }
   }
   &__text-lampushka {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     &-sm {
       text-align: center;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
     }
   }
   &__text-meeting {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
+  }
+
+  &__br {
+    &-mobile {
+      display: block;
+    }
+    &-desktop {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 391px) {
+  .home {
+    padding-top: 228px;
+    background-image: url("src/assets/background/background_homeG.png");
+    gap: 100px;
+    &__image {
+      width: 100%;
+      margin-bottom: 32px;
+      height: 531px;
+      border-radius: 90px;
+      &--puma {
+        object-fit: cover;
+        height: auto;
+      }
+    }
+    &__title {
+      &-eco {
+        margin-bottom: 56px;
+      }
+    }
+    &__projects-container {
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    &__direction {
+      grid-template-columns: 1fr 1fr;
+      &-lebed {
+        border-radius: 160px 0px 0px 160px;
+        grid-template-columns: none;
+      }
+      &-title {
+        font-size: 32px;
+        line-height: 140%; /* 44.8px */
+        margin-bottom: 40px;
+      }
+      &-image {
+        display: block;
+      }
+      &-pacha {
+        display: none;
+      }
+    }
+
+    &__title {
+      font-size: 80px;
+    }
+    &__description {
+    }
+    &__br {
+      &-mobile {
+        display: none;
+      }
+      &-desktop {
+        display: block;
+      }
+    }
+    &__lyamur {
+      border-radius: 342px 342px 0px 0px;
+      height: 584px;
+      display: block;
+    }
+    &__projects-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__volonters {
+      display: grid;
+      grid-template-columns: 407px 1fr;
+      margin-bottom: 32px;
+      &-title {
+        text-align: left;
+      }
+
+      &-image {
+        grid-template-rows: 258px 352px 352px;
+        gap: 32px;
+        img {
+          display: block;
+        }
+      }
+      &-description {
+        margin-bottom: 56px;
+      }
+    }
+    &__dushamoloda {
+      height: auto;
+      object-fit: none;
+      margin-bottom: 32px;
+    }
+    &__text-lampushka {
+      margin-bottom: 24px;
+      &-sm {
+        margin-bottom: 32px;
+      }
+    }
+    &__text-meeting {
+      text-align: center;
+      margin-bottom: 32px;
+    }
   }
 }

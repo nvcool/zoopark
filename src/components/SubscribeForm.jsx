@@ -26,15 +26,17 @@ export const SubscribeForm = () => {
         <Button>Подписаться</Button>
         <img src={flowers} alt="" />
       </form>
-      <p className="subscribe__paragraph text text--center">
-        Нажимая на кнопку, вы даете <br />{" "}
-        <a href="#">согласие на обработку персональных данных.</a>
-      </p>
-      <p className="text text--center">
-        Вы также можете узнавать наши новости из группы Вконтакте. Мы регулярно
-        обновляем нашу ленту новостей, радуя подписчиков новыми интересными
-        публикациями.
-      </p>
+      <div className="subscribe__paragraph">
+        <p className="text">
+          Нажимая на кнопку, вы даете <br />{" "}
+          <a href="#">согласие на обработку персональных данных.</a>
+        </p>
+        <p className="text">
+          Вы также можете узнавать наши новости из группы Вконтакте. Мы
+          регулярно обновляем нашу ленту новостей, радуя подписчиков новыми
+          интересными публикациями.
+        </p>
+      </div>
       <Button className="subscribe__button-vk">
         Наша группа ВКонтакте <img src={vk} alt="vk" />
       </Button>

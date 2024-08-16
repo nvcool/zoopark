@@ -1,13 +1,17 @@
 @use "../colors" as *;
 
+* {
+  box-sizing: border-box;
+}
+
 .project {
   background-color: #fff;
   border-radius: 30px;
   text-align: center;
   color: $dark-green;
-  font-size: 18px;
-  line-height: 140%; /* 25.2px */
-  height: 382px;
+  font-size: 16px;
+  line-height: 130.033%; /* 20.805px */
+  height: 264px;
   padding: 16px 0 24px;
   display: flex;
   flex-direction: column;
@@ -39,21 +43,21 @@
 }
 
 .text {
-  font-size: 18px;
-  line-height: 140%; /* 25.2px */
+  font-size: 16px;
+  line-height: 130.033%; /* 20.805px */
   color: $dark-blue;
   strong {
     font-weight: 600;
   }
   &--lg {
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 500;
     strong {
       font-weight: 700;
     }
   }
   &--center {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     text-align: center;
   }
 }
@@ -61,15 +65,15 @@
 .title {
   color: $orange;
   font-family: "Shantell Sans";
-  font-size: 64px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 500;
   line-height: normal;
   &--yellow {
     color: $yellow;
   }
   &--center {
     text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: 24px;
   }
 }
 
@@ -77,6 +81,9 @@
   max-width: 1024px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  gap: 56px;
 }
 
 .navigation {
@@ -85,34 +92,42 @@
   right: 0;
   margin-top: 28px;
   &__link-list {
-    display: flex;
     gap: 8px;
     margin-top: 36px;
+    display: none;
   }
   &__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   &__logo {
     display: grid;
     justify-items: center;
     &-link {
       margin-bottom: 6px;
+      img {
+        width: 67px;
+        height: 67px;
+      }
     }
     &-description {
       font-family: "Shantell Sans";
-      font-size: 12px;
+      font-size: 6.5px;
       font-weight: 500;
     }
+  }
+  &__menu {
+    opacity: 0.56;
   }
 }
 
 .button {
   color: #fff;
   background-color: $orange;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 140%; /* 30.8px */
+  line-height: 130.033%; /* 23.406px */
   max-width: 496px;
   width: 100%;
   padding: 18px 0;
@@ -133,13 +148,14 @@
 }
 
 .link {
-  padding: 4px 16px;
+  padding: 8px 8px;
   background-color: $yellow;
   border-radius: 14px;
   text-transform: uppercase;
   color: $dark-blue;
   font-weight: 500;
   transition: 0.5s;
+  text-align: center;
   &:hover {
     background-color: #fbbe14;
   }
@@ -149,9 +165,11 @@
 }
 
 .support {
-  margin-bottom: 100px;
+  margin-bottom: 56px;
   &__text {
-    margin-bottom: 24px;
+    display: grid;
+    gap: 24px;
+    text-align: center;
     &--margin {
       margin-bottom: 32px;
     }
@@ -160,7 +178,7 @@
     display: block;
     margin: 0 auto;
     width: fit-content;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
   &__button {
     margin: 0 auto;
@@ -180,8 +198,10 @@
       background-color: #fff;
       border-radius: 30px;
       padding: 22px 0;
-      width: 496px;
+      max-width: 496px;
+      width: 100%;
       text-align: center;
+      width: 100%;
       &::placeholder {
         color: $dark-blue;
         opacity: 0.64;
@@ -191,11 +211,15 @@
       position: absolute;
       bottom: 0;
       z-index: -1;
+      width: 100%;
     }
   }
 
   &__paragraph {
-    margin-bottom: 56px;
+    display: grid;
+    gap: 40px;
+    margin-bottom: 24px;
+    text-align: center;
     a {
       color: $yellow;
     }
@@ -207,7 +231,6 @@
     justify-content: center;
     gap: 16px;
     margin: 0 auto;
-    margin-bottom: 100px;
     &:hover {
       background-color: #fff;
       color: $dark-blue;
@@ -221,10 +244,10 @@
 
 .footer {
   border-top: 1px solid #304f6c64;
-  padding: 56px 0;
+  padding: 32px 0;
   &__text {
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     text-transform: uppercase;
   }
   address {
@@ -399,5 +422,91 @@ input {
   to {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+//После 390px применяются стили
+
+@media screen and (min-width: 391px) {
+  .project {
+    font-size: 18px;
+    line-height: 140%; /* 25.2px */
+    height: 382px;
+  }
+
+  .navigation {
+    &__container {
+      padding: 0;
+      align-items: normal;
+    }
+    &__link {
+      &-list {
+        display: flex;
+      }
+    }
+
+    &__menu {
+      display: none;
+    }
+    &__logo {
+      &-description {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .text {
+    font-size: 18px;
+    line-height: 140%; /* 25.2px */
+    &--lg {
+      font-size: 32px;
+    }
+    &--center {
+      margin-bottom: 32px;
+    }
+  }
+
+  .container {
+    padding: 0;
+    gap: 100px;
+  }
+
+  .button {
+    font-size: 22px;
+    line-height: 140%; /* 25.2px */
+  }
+
+  .link {
+    padding: 4px 16px;
+  }
+
+  .title {
+    font-size: 64px;
+    font-weight: 500;
+    &--center {
+      margin-bottom: 56px;
+    }
+  }
+  .support {
+    margin-bottom: 100px;
+    &__text {
+    }
+    &__link {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+  .subscribe {
+    &__paragraph {
+      margin-bottom: 56px;
+      gap: 56px;
+    }
+  }
+
+  .footer {
+    padding: 56px 0;
+    &__text {
+      margin-bottom: 16px;
+    }
   }
 }
