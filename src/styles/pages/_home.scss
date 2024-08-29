@@ -2,14 +2,14 @@
 
 .home {
   background-image: url("src/assets/background/home-mobile.webp");
-  padding-top: 126px;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position-y: -126px;
   display: grid;
   gap: 56px;
   &__description {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
   }
   &__title {
     color: $orange;
@@ -133,12 +133,13 @@
         height: 100%;
         object-fit: cover;
         overflow: hidden;
-        border-radius: 60px;
+        border-radius: 50px;
         display: none;
       }
     }
     &-mobile img {
       display: block;
+      height: 260px;
     }
     &-3 {
       border-radius: 90px;
@@ -178,8 +179,8 @@
 
 @media screen and (min-width: 391px) {
   .home {
-    padding-top: 228px;
     background-image: url("src/assets/background/background_homeG.png");
+    background-position-y: -228px;
     gap: 100px;
     &__image {
       width: 100%;
@@ -190,6 +191,9 @@
         object-fit: cover;
         height: auto;
       }
+    }
+    &__description {
+      margin-bottom: 24px;
     }
     &__title {
       &-eco {
@@ -246,7 +250,11 @@
       &-title {
         text-align: left;
       }
-
+      &-mobile img {
+        display: block;
+        height: 100%;
+        border-radius: 60px;
+      }
       &-image {
         grid-template-rows: 258px 352px 352px;
         gap: 32px;

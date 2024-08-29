@@ -1,22 +1,23 @@
 import logo from "@assets/logo.svg";
 import { Link } from "./ui/Link";
 import menu from "@assets/menu.svg";
+import { NavLink } from "react-router-dom";
 
 const links = [
-  { label: "О нас", href: "#" },
-  { label: "проекты и события", href: "#" },
-  { label: "новости", href: "#" },
-  { label: "партнеры", href: "#" },
-  { label: "зоопарк", href: "#" },
+  { label: "О нас", to: "/about-us" },
+  { label: "проекты и события", to: "/re" },
+  { label: "новости", to: "/hab" },
+  { label: "партнеры", to: "/gov" },
+  { label: "зоопарк", to: "/no" },
 ];
 export function Header() {
   return (
     <header className="container navigation">
       <nav className="navigation__container">
         <div className="navigation__logo">
-          <a href="#" className="navigation__logo-link">
+          <NavLink to="/" className="navigation__logo-link">
             <img src={logo} alt="logo" />
-          </a>
+          </NavLink>
           <span className="navigation__logo-description">
             "Лампушка"- Заповедный мир"
           </span>
@@ -25,7 +26,7 @@ export function Header() {
           {links.map((link) => {
             return (
               <li key={link.label} className="navigation__link">
-                <Link href={link.href}>{link.label}</Link>
+                <Link to={link.to}>{link.label}</Link>
               </li>
             );
           })}

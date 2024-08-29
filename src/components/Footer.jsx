@@ -4,7 +4,7 @@ import telegram from "@assets/telegram.svg";
 
 export const Footer = () => {
   return (
-    <div className="container ">
+    <footer className="container">
       <div className="footer">
         <p className="footer__text text">
           АНО ПО СОХРАНЕНИЮ ПРИРОДНЫХ И СЕМЕЙНЫХ ЦЕННОСТЕЙ ЛАМПУШКА - ЗАПОВЕДНЫЙ
@@ -29,6 +29,6 @@ export const Footer = () => {
           </a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };

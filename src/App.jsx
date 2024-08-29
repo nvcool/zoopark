@@ -1,19 +1,24 @@
 import { useState } from "react";
-import { Modal } from "./components/Modal";
+// import { Modal } from "./components/Modal";
 import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
 import { Footer } from "./components/Footer";
+import { Route, Routes } from "react-router-dom";
+import { AboutUs } from "./pages/AboutUs";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
-        <Header />
-        <Home />
-        <Footer />
-      </div>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </main>
+      <Footer />
     </>
   );
 }

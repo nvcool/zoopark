@@ -6,9 +6,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import "normalize.css";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Inter";
   background-color: $background;
+}
+
+main {
+  padding-top: 126px;
 }
 
 a {
@@ -20,10 +28,17 @@ li {
 }
 
 ul,
+ol,
 h1,
 h2,
 h3,
 p {
   margin: 0;
   padding: 0;
+}
+
+@media screen and (min-width: 391px) {
+  main {
+    padding-top: 228px;
+  }
 }

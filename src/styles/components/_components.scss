@@ -1,9 +1,5 @@
 @use "../colors" as *;
 
-* {
-  box-sizing: border-box;
-}
-
 .project {
   background-color: #fff;
   border-radius: 30px;
@@ -48,6 +44,9 @@
   color: $dark-blue;
   strong {
     font-weight: 600;
+  }
+  strong.text__strong {
+    font-weight: 700;
   }
   &--lg {
     font-size: 20px;
@@ -162,6 +161,9 @@
   &:focus {
     background-color: #fbbe14;
   }
+  &--active {
+    background-color: #fbbe14;
+  }
 }
 
 .support {
@@ -215,7 +217,7 @@
     }
     &-mobile {
       position: absolute;
-      left: 0;
+      left: -16px;
       top: -160px;
       z-index: -1;
     }
@@ -272,10 +274,10 @@
     display: flex;
     gap: 24px;
     justify-content: center;
-  }
-  img {
-    width: 48px;
-    height: 48px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 
@@ -431,6 +433,58 @@ input {
   }
 }
 
+.swiper {
+  margin: 0;
+  margin-bottom: 100px;
+  &-slide {
+    display: grid;
+    text-align: center;
+    width: 232px;
+    margin-top: 65px;
+    height: fit-content;
+    span {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 344px;
+      border-radius: 70px;
+    }
+    &-active {
+      width: 320px;
+      margin-top: 0;
+      span {
+        display: block;
+      }
+      &-text {
+        margin-bottom: 8px;
+      }
+      img {
+        height: 475px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 126px;
+    z-index: 2;
+    button {
+      cursor: pointer;
+    }
+    &-button {
+      img {
+        rotate: 180deg;
+      }
+    }
+  }
+}
+
 //После 390px применяются стили
 
 @media screen and (min-width: 391px) {
@@ -455,6 +509,12 @@ input {
       display: none;
     }
     &__logo {
+      &-link {
+        img {
+          width: 124px;
+          height: 124px;
+        }
+      }
       &-description {
         font-size: 12px;
       }
@@ -488,7 +548,7 @@ input {
 
   .title {
     font-size: 64px;
-    font-weight: 500;
+    font-weight: 400;
     &--center {
       margin-bottom: 56px;
     }
@@ -526,6 +586,12 @@ input {
     padding: 56px 0;
     &__text {
       margin-bottom: 16px;
+    }
+    &__link {
+      img {
+        width: 48px;
+        height: 48px;
+      }
     }
   }
 }

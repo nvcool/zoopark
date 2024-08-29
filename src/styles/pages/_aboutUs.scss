@@ -1,0 +1,198 @@
+@use "../colors" as *;
+
+.about-us {
+  background-image: url(/src/assets/background/background-about-us-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -228px;
+  &__mission {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 56px;
+    flex-direction: column;
+    &-content {
+      display: grid;
+      gap: 16px;
+      height: fit-content;
+    }
+    &-image {
+      display: flex;
+      gap: 25px;
+      padding-top: 0;
+      div {
+        display: grid;
+        height: fit-content;
+      }
+      img {
+        border-radius: 30px;
+      }
+    }
+    &-verblyd {
+      img {
+        border-radius: 20px;
+      }
+    }
+  }
+  &__paragraph {
+    margin-bottom: 24px;
+  }
+  &__lama {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 32px;
+    img {
+      height: 251px;
+      border-radius: 40px;
+    }
+  }
+  &__enot {
+    display: flex;
+    gap: 24px;
+    img {
+      height: 278px;
+      border-radius: 40px;
+    }
+    &-description {
+      display: grid;
+      gap: 16px;
+      height: fit-content;
+    }
+  }
+  &__target {
+    &-title {
+      margin-bottom: 24px;
+    }
+    &-paragraph {
+      margin-bottom: 16px;
+    }
+    &-list {
+      display: none;
+      gap: 32px;
+      .about-us__target-item:nth-child(even) {
+        img {
+          order: -1;
+        }
+      }
+    }
+    &-item {
+      display: flex;
+      gap: 32px;
+      img {
+        border-radius: 60px;
+      }
+      span {
+        color: $dark-blue;
+      }
+      div {
+        background-color: #fff;
+        border-radius: 60px;
+        padding: 0 32px;
+        align-items: center;
+        display: flex;
+        gap: 25px;
+      }
+    }
+
+    &-image--order {
+      order: -1;
+    }
+  }
+  &__goat {
+    &-text {
+      margin-bottom: 56px;
+    }
+    img {
+      border-radius: 60px;
+    }
+  }
+
+  &__history {
+    &-title {
+      margin-bottom: 56px;
+    }
+    &-box {
+      display: flex;
+      gap: 32px;
+      img {
+        border-radius: 30px;
+      }
+    }
+    &-text {
+      display: grid;
+      gap: 16px;
+    }
+  }
+
+  &__principles {
+    &-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 100px;
+      img {
+        border-radius: 60px;
+      }
+      &--margin {
+        margin-bottom: 32px;
+      }
+    }
+    &-title {
+      margin-bottom: 56px;
+    }
+    &-approach {
+      display: grid;
+      align-content: space-between;
+    }
+  }
+
+  &__command {
+    position: relative;
+    display: grid;
+    gap: 56px;
+  }
+  &__slider {
+    display: grid;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 391px) {
+  .about-us {
+    background-image: url(/src/assets/background/background-about-us.png);
+    &__mission {
+      gap: 122px;
+      flex-direction: row;
+      &-image {
+        padding-top: 19px;
+        gap: 32px;
+      }
+      &-verblyd {
+        border-radius: 18px;
+      }
+    }
+    &__lama {
+      margin-bottom: 56px;
+      img {
+        border-radius: 60px;
+        height: 282px;
+      }
+    }
+    &__paragraph {
+      margin-bottom: 56px;
+    }
+    &__enot {
+      gap: 32px;
+      img {
+        border-radius: 60px;
+      }
+    }
+    &__slider {
+      display: none;
+    }
+    &__target {
+      &-list {
+        display: grid;
+      }
+    }
+  }
+}
