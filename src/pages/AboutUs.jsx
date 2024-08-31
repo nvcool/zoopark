@@ -89,7 +89,7 @@ export const AboutUs = () => {
           <h2 className="about-us__target-title title title--yellow">
             Наши цели
           </h2>
-          <p className="about-us__target-paragraph text text--lg">
+          <p className="about-us__target-paragraph about-us__target-paragraph--display text text--lg">
             Приоритетные направления нашей деятельности
           </p>
           <AboutUsTargets />

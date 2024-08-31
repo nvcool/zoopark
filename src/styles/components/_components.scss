@@ -435,7 +435,7 @@ input {
 
 .swiper {
   margin: 0;
-  margin-bottom: 100px;
+  margin-bottom: 56px;
   &-slide {
     display: grid;
     text-align: center;
@@ -593,5 +593,8 @@ input {
         height: 48px;
       }
     }
+  }
+  .swiper {
+    margin-bottom: 100px;
   }
 }

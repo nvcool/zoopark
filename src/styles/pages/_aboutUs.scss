@@ -25,11 +25,17 @@
       }
       img {
         border-radius: 30px;
+        margin-bottom: 16px;
       }
     }
     &-verblyd {
       img {
         border-radius: 20px;
+      }
+    }
+    &-lebed {
+      img {
+        width: 100%;
       }
     }
   }
@@ -41,14 +47,19 @@
     gap: 16px;
     margin-bottom: 32px;
     img {
+      object-fit: cover;
+      width: 100%;
       height: 251px;
       border-radius: 40px;
     }
   }
   &__enot {
+    flex-direction: column;
     display: flex;
     gap: 24px;
     img {
+      object-fit: cover;
+      width: 100%;
       height: 278px;
       border-radius: 40px;
     }
@@ -64,6 +75,9 @@
     }
     &-paragraph {
       margin-bottom: 16px;
+      &--display {
+        display: none;
+      }
     }
     &-list {
       display: none;
@@ -96,12 +110,18 @@
     &-image--order {
       order: -1;
     }
+    .target--mobile {
+      display: block;
+    }
   }
   &__goat {
     &-text {
-      margin-bottom: 56px;
+      margin-bottom: 24px;
     }
     img {
+      object-fit: cover;
+      width: 100%;
+      height: 251px;
       border-radius: 60px;
     }
   }
@@ -112,9 +132,11 @@
     }
     &-box {
       display: flex;
+      flex-direction: column;
       gap: 32px;
       img {
-        border-radius: 30px;
+        height: 251px;
+        border-radius: 40px;
       }
     }
     &-text {
@@ -126,33 +148,57 @@
   &__principles {
     &-box {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 32px;
-      margin-bottom: 100px;
+      margin-bottom: 56px;
       img {
+        height: 464px;
         border-radius: 60px;
       }
       &--margin {
-        margin-bottom: 32px;
+        margin-bottom: 24px;
       }
     }
     &-title {
-      margin-bottom: 56px;
+      margin-bottom: 24px;
     }
     &-approach {
       display: grid;
       align-content: space-between;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 464px;
+      }
+      p {
+        margin-bottom: 24px;
+      }
     }
   }
 
   &__command {
     position: relative;
     display: grid;
-    gap: 56px;
+    gap: 24px;
   }
   &__slider {
     display: grid;
     position: relative;
+    div.about-us__slider-box {
+      height: 100%;
+    }
+    &-box {
+      div {
+        background-color: #fff;
+        padding: 55px 24px;
+        border-radius: 60px;
+        display: grid;
+        gap: 8px;
+      }
+    }
+    span.about-us__slider-number {
+      color: $dark-blue;
+    }
   }
 }
 
@@ -165,23 +211,34 @@
       &-image {
         padding-top: 19px;
         gap: 32px;
+        img {
+          margin-bottom: 0;
+        }
       }
       &-verblyd {
         border-radius: 18px;
+      }
+      &-lebed {
+        img {
+          width: fit-content;
+        }
       }
     }
     &__lama {
       margin-bottom: 56px;
       img {
+        width: fit-content;
         border-radius: 60px;
         height: 282px;
       }
     }
+
     &__paragraph {
       margin-bottom: 56px;
     }
     &__enot {
       gap: 32px;
+      flex-direction: row;
       img {
         border-radius: 60px;
       }
@@ -193,6 +250,54 @@
       &-list {
         display: grid;
       }
+      &-paragraph {
+        &--display {
+          display: block;
+        }
+      }
+    }
+    &__goat {
+      &-text {
+        margin-bottom: 56px;
+      }
+      img {
+        height: 450px;
+      }
+    }
+    &__history {
+      &-title {
+        margin-bottom: 56px;
+      }
+      &-box {
+        flex-direction: row;
+        img {
+          height: fit-content;
+          border-radius: 30px;
+        }
+      }
+    }
+    &__principles {
+      &-box {
+        margin-bottom: 100px;
+        grid-template-columns: 1fr 1fr;
+        img {
+          height: fit-content;
+        }
+        &--margin {
+          margin-bottom: 32px;
+        }
+      }
+      &-title {
+        margin-bottom: 56px;
+      }
+      &-approach {
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__command {
+      margin-bottom: 56px;
     }
   }
 }

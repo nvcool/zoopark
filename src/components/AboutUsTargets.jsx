@@ -53,9 +53,15 @@ export default function AboutUsTargets() {
           className="">
           {targets.map((target, i) => {
             return (
-              <SwiperSlide key={target.cardImage}>
-                <span>0{i + 1}</span>
-                <p>{target.text}</p>
+              <SwiperSlide
+                className="about-us__slider-box"
+                key={target.cardImage}>
+                <div>
+                  <span className="about-us__slider-number title">
+                    0{i + 1}
+                  </span>
+                  <p className="text">{target.text}</p>
+                </div>
               </SwiperSlide>
             );
           })}
