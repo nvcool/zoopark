@@ -435,45 +435,28 @@ input {
 
 .swiper {
   margin: 0;
-  margin-bottom: 56px;
-  &-slide {
-    display: grid;
-    text-align: center;
-    width: 232px;
-    margin-top: 65px;
-    height: fit-content;
-    span {
-      display: none;
-    }
-    img {
-      width: 100%;
-      height: 344px;
-      border-radius: 70px;
-    }
-    &-active {
-      width: 320px;
-      margin-top: 0;
-      span {
-        display: block;
-      }
-      &-text {
-        margin-bottom: 8px;
-      }
-      img {
-        height: 475px;
-        margin-bottom: 16px;
+  &--bottom {
+    margin-top: 0;
+    margin-bottom: 56px;
+    .swiper {
+      &-slide {
+        margin-top: 0;
+        &-active {
+          margin: 0;
+          span {
+            display: block;
+          }
+          &-text {
+            margin-bottom: 8px;
+          }
+          img {
+            margin-bottom: 16px;
+          }
+        }
       }
     }
   }
   &-navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 126px;
-    z-index: 2;
     button {
       cursor: pointer;
     }
@@ -482,6 +465,31 @@ input {
         rotate: 180deg;
       }
     }
+    &--mobile {
+      display: none;
+    }
+  }
+  &-slide {
+    display: grid;
+    text-align: center;
+    width: 232px;
+    height: fit-content;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 392px;
+      border-radius: 70px;
+    }
+  }
+}
+
+.br {
+  &-mobile {
+    display: block;
+  }
+  &-desktop {
+    display: none;
   }
 }
 
@@ -596,5 +604,52 @@ input {
   }
   .swiper {
     margin-bottom: 100px;
+    &--bottom {
+      .swiper {
+        &-slide {
+          margin-top: 65px;
+          &-active {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    &-slide {
+      span {
+        display: none;
+      }
+      img {
+        width: 100%;
+        height: 344px;
+        border-radius: 70px;
+      }
+      &-active {
+        width: 320px;
+        margin-top: 0;
+        span {
+          display: block;
+        }
+        &-text {
+          margin-bottom: 8px;
+        }
+        img {
+          height: 475px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+    &-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 126px;
+      z-index: 2;
+      &--mobile {
+        display: flex;
+      }
+    }
   }
 }

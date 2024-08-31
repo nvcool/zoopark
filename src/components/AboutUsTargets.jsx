@@ -46,11 +46,7 @@ export default function AboutUsTargets() {
   return (
     <>
       <div className="about-us__slider">
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={32}
-          centeredSlides={true}
-          className="">
+        <Swiper slidesPerView={1.4} spaceBetween={32} className="">
           {targets.map((target, i) => {
             return (
               <SwiperSlide

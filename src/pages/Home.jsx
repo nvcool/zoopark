@@ -47,14 +47,14 @@ export const Home = () => {
             Лампушка <br />- Заповедный мир
           </h1>
           <p className="home__description text">
-            Автономная некоммерческая организация{" "}
-            <br className="home__br-mobile" /> по{" "}
+            Автономная некоммерческая организация <br className="br-mobile" />{" "}
+            по{" "}
             <strong>
-              сохранению природных <br className="home__br-desktop" />и семейных
-              <br className="home__br-mobile" />
+              сохранению природных <br className="br-desktop" />и семейных
+              <br className="br-mobile" />
               ценностей
             </strong>{" "}
-            <br className="home__br-mobile" />
+            <br className="br-mobile" />
             «Лампушка» – заповедный мир»
           </p>
 
@@ -64,8 +64,8 @@ export const Home = () => {
         </section>
         <section>
           <h2 className="home__title-eco title">
-            Экологическая <br className="home__br-desktop" /> и социальная{" "}
-            <br className="home__br-desktop" />
+            Экологическая <br className="br-desktop" /> и социальная{" "}
+            <br className="br-desktop" />
             ответственность
           </h2>
           <div className="home__direction">
@@ -74,7 +74,7 @@ export const Home = () => {
             </div>
             <div className="home__direction-description">
               <h3 className="home__direction-title">
-                Основные направления <br className="home__br-mobile" /> нашей
+                Основные направления <br className="br-mobile" /> нашей
                 деятельности:
               </h3>
               <p className="home__direction-text text">
@@ -151,7 +151,7 @@ export const Home = () => {
               <h3 className="home__volonters-title title title--yellow">
                 Наши <br />
                 волонтеры
-                <br className="home__br-desktop" /> и участники
+                <br className="br-desktop" /> и участники
               </h3>
               <div>
                 <img src={volonter1} alt="volonter1" />
@@ -212,18 +212,17 @@ export const Home = () => {
           <img className="home__image" src={moris} alt="" />
           <p className="home__text-lampushka text text--lg">
             На территории Заповедного мира «Шишки на Лампушке»{" "}
-            <br className="home__br-mobile" /> есть{" "}
-            <strong>уникальное место</strong>, где можно не только посмотреть{" "}
-            <br className="home__br-mobile" />
+            <br className="br-mobile" /> есть <strong>уникальное место</strong>,
+            где можно не только посмотреть <br className="br-mobile" />
             на животных, но и познакомиться со многими поближе: покормить,
-            погладить, вместе сфотографироваться{" "}
-            <br className="home__br-mobile" /> или погулять.
+            погладить, вместе сфотографироваться <br className="br-mobile" />{" "}
+            или погулять.
           </p>
           <p className="home__text-lampushka-sm text">
             Это <strong className="text__strong">«Зоопарк на Лампушке»</strong>{" "}
             - самый большой лицензированный частный зоопарк Санкт-Петербурга
-            <br className="home__br-mobile" /> и Ленинградской области, в
-            котором проживает более 400 животных.
+            <br className="br-mobile" /> и Ленинградской области, в котором
+            проживает более 400 животных.
           </p>
           <div className="home__button-projects">
             <Button>Узнать больше</Button>

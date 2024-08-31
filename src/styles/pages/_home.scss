@@ -166,15 +166,6 @@
     text-align: center;
     margin-bottom: 24px;
   }
-
-  &__br {
-    &-mobile {
-      display: block;
-    }
-    &-desktop {
-      display: none;
-    }
-  }
 }
 
 @media screen and (min-width: 391px) {

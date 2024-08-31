@@ -46,6 +46,16 @@ export default function Slider() {
   return (
     <>
       <Swiper
+        breakpoints={{
+          390: {
+            slidesPerView: 1.3,
+            spaceBetween: 20,
+          },
+          1366: {
+            slidesPerView: "auto",
+            spaceBetween: 32,
+          },
+        }}
         navigation={{
           // Both prevEl & nextEl are null at render so this does not work
           prevEl: navigationPrevRef.current,
@@ -55,11 +65,11 @@ export default function Slider() {
           swiper.params.navigation.prevEl = navigationPrevRef.current;
           swiper.params.navigation.nextEl = navigationNextRef.current;
         }}
-        slidesPerView={"auto"}
+        // slidesPerView={"auto"}
         modules={[Navigation]}
-        spaceBetween={32}
+        // spaceBetween={32}
         centeredSlides={true}
-        className="sliper">
+        className="swiper--bottom">
         {team.map((member) => {
           return (
             <SwiperSlide className="">
@@ -72,7 +82,7 @@ export default function Slider() {
           );
         })}
       </Swiper>
-      <div className="swiper-navigation container">
+      <div className="swiper-navigation swiper-navigation--mobile container">
         <button ref={navigationPrevRef}>
           <img src={arrow} alt="" />
         </button>
