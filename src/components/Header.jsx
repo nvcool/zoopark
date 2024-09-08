@@ -1,11 +1,11 @@
 import logo from "@assets/logo.svg";
-import { Link } from "./ui/Link";
+import { CustomNavLink } from "./ui/CustomNavLink";
 import menu from "@assets/menu.svg";
 import { NavLink } from "react-router-dom";
 
 const links = [
   { label: "О нас", to: "/about-us" },
-  { label: "проекты и события", to: "/re" },
+  { label: "проекты и события", to: "/projects" },
   { label: "новости", to: "/hab" },
   { label: "партнеры", to: "/gov" },
   { label: "зоопарк", to: "/no" },
@@ -26,7 +26,7 @@ export function Header() {
           {links.map((link) => {
             return (
               <li key={link.label} className="navigation__link">
-                <Link to={link.to}>{link.label}</Link>
+                <CustomNavLink to={link.to}>{link.label}</CustomNavLink>
               </li>
             );
           })}

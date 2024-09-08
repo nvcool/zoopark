@@ -142,7 +142,7 @@ export const Home = () => {
             })}
           </div>
           <div className="home__button-projects">
-            <Button>Больше проектов</Button>
+            <Link to={"projects"}>Больше проектов</Link>
           </div>
         </section>
         <section>

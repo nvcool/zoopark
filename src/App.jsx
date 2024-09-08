@@ -5,6 +5,7 @@ import { Home } from "./pages/Home";
 import { Footer } from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import { AboutUs } from "./pages/AboutUs";
+import { Projects } from "./pages/Projects";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +16,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

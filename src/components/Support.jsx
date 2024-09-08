@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "./ui/Link";
+import { CustomNavLink } from "./ui/CustomNavLink";
 import { Button } from "./ui/Button";
 
 export const Support = () => {
@@ -35,10 +35,10 @@ export const Support = () => {
           </strong>
         </p>
       </div>
-      <Link className="support__link" href="#">
+      <CustomNavLink className="support__link" href="#">
         скачать банковские реквизиты <br className="home__br-mobile" /> нко
         «лампушка» - заповедный мир»
-      </Link>
+      </CustomNavLink>
       <Button className="support__button">Стать частью команды</Button>
     </div>
   );

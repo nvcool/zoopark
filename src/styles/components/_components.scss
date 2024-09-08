@@ -74,6 +74,9 @@
     text-align: center;
     margin-bottom: 24px;
   }
+  &--margin {
+    margin-bottom: 56px;
+  }
 }
 
 .container {
@@ -604,6 +607,9 @@ input {
   }
   .swiper {
     margin-bottom: 100px;
+    &-wrapper {
+      justify-content: center;
+    }
     &--bottom {
       .swiper {
         &-slide {
@@ -614,6 +620,7 @@ input {
         }
       }
     }
+
     &-slide {
       span {
         display: none;
@@ -645,11 +652,20 @@ input {
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 126px;
+      bottom: 0;
       z-index: 2;
       &--mobile {
         display: flex;
       }
+    }
+  }
+
+  .br {
+    &-mobile {
+      display: none;
+    }
+    &-desktop {
+      display: block;
     }
   }
 }

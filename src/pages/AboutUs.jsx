@@ -181,8 +181,8 @@ export const AboutUs = () => {
       </div>
       <section className="about-us__command">
         <h3 className="container title">Наша команда</h3>
-        <Slider />
       </section>
+      <Slider />
     </div>
   );
 };

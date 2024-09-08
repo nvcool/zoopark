@@ -44,7 +44,7 @@ export default function Slider() {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   return (
-    <>
+    <div style={{ position: "relative" }}>
       <Swiper
         breakpoints={{
           390: {
@@ -90,6 +90,6 @@ export default function Slider() {
           <img src={arrow} alt="" />
         </button>
       </div>
-    </>
+    </div>
   );
 }

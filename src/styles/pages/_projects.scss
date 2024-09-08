@@ -1,0 +1,236 @@
+@use "../colors" as *;
+
+.projects {
+  background-image: url(/src/assets/background/background_projects-mobile.png);
+  background-size: cover;
+
+  background-position-y: -120px;
+  &__title {
+    text-align: left;
+    margin-bottom: 24px;
+  }
+  h1.projects__title {
+    color: #015f4f;
+  }
+
+  &__container {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    &-box {
+      background-color: #fff;
+      border-radius: 30px;
+      text-align: center;
+      color: $dark-green;
+      font-size: 18px;
+      line-height: 130.033%; /* 20.805px */
+      height: 382px;
+      padding: 16px 0 24px;
+      display: flex;
+      flex-direction: column;
+      a {
+        width: 32px;
+        height: 32px;
+        display: flex;
+      }
+      strong {
+        font-weight: 600;
+        text-decoration-line: underline;
+        margin-bottom: 8px;
+        display: block;
+      }
+      &__image {
+        margin: 0 auto 16px;
+        width: 54px;
+        height: 54px;
+      }
+      p {
+        white-space: pre-line;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+        gap: 16px;
+      }
+    }
+    &-image {
+      margin: 0 auto 16px;
+      width: 54px;
+      height: 54px;
+    }
+  }
+  .projects__container-box:nth-child(even) {
+    background-color: $background;
+  }
+
+  &__events {
+    &-title {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+    &-container {
+      display: grid;
+      gap: 16px;
+    }
+    &-item {
+      background-color: #fff;
+      border-radius: 30px;
+
+      padding: 22px 0;
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+
+  &__zoopark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    h2 {
+      margin-right: auto;
+    }
+    img {
+      border-radius: 30px;
+      height: 251px;
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 24px;
+    }
+    &-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      p {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__photo.swiper {
+    margin-bottom: 56px;
+    .projects__photo-slider {
+      width: 112px;
+
+      img {
+        height: 344px;
+        width: 100%;
+        border-radius: 50px;
+        margin-bottom: 16px;
+      }
+    }
+    .projects__photo-slider.swiper-slide-active {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  &__slider {
+    display: grid;
+    position: relative;
+    div.projects__slider-box {
+      height: 363px;
+    }
+
+    &-box {
+      background-color: #fff;
+      padding: 24px 16px;
+      border-radius: 30px;
+      color: $dark-green;
+      font-size: 18px;
+      line-height: 130.033%; /* 20.805px */
+      display: flex;
+      flex-direction: column;
+      a {
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 0;
+        }
+      }
+      strong {
+        font-weight: 600;
+        text-decoration-line: underline;
+        margin-bottom: 8px;
+        display: block;
+      }
+      &-content {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        div {
+          display: flex;
+          justify-content: center;
+          margin-top: auto;
+          gap: 16px;
+        }
+      }
+    }
+    img.projects__slider-image {
+      margin: 0 auto;
+      width: 54px;
+      height: 54px;
+    }
+  }
+}
+
+@media screen and (min-width: 391px) {
+  .projects {
+    background-image: url(/src/assets/background/background_projects.png);
+    background-position-y: -228px;
+    &__title {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    &__events {
+      &-title {
+        text-align: center;
+        margin-bottom: 56px;
+      }
+      &-container {
+        gap: 24px;
+      }
+    }
+    &__container {
+      display: grid;
+    }
+    &__zoopark {
+      h2 {
+        margin-right: 0;
+      }
+      div {
+        display: flex;
+        gap: 32px;
+      }
+      img {
+        border-radius: 90px;
+        height: 542px;
+      }
+    }
+    &__slider {
+      display: none;
+      &-box {
+      }
+    }
+
+    &__photo {
+      .projects__photo-slider {
+        margin: 75px 6px 0 0;
+        width: 112px;
+        img {
+          height: 136px;
+          width: 100%;
+          border-radius: 30px;
+        }
+      }
+      .projects__photo-slider.swiper-slide-active {
+        margin: 0 32px;
+        width: 496px;
+        img {
+          height: 316px;
+          border-radius: 90px;
+        }
+      }
+    }
+  }
+}

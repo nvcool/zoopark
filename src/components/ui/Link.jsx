@@ -1,12 +1,9 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 
-export const Link = ({ children, to, className }) => {
+export const Link = ({ to, children }) => {
   return (
-    <NavLink
-      className={({ isActive }) => {
-        return `link ${isActive ? "link--active" : ""} ${className || ""}`;
-      }}
-      to={to}>
+    <NavLink className={"button"} to={to}>
       {children}
     </NavLink>
   );
